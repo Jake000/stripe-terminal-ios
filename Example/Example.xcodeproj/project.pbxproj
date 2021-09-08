@@ -20,6 +20,7 @@
 		24FAAAFF2345067A00D47D40 /* ReaderConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FAAAFE2345067A00D47D40 /* ReaderConfiguration.swift */; };
 		259FDFDF2485AF0F0097686C /* EventDisplayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259FDFDE2485AF0F0097686C /* EventDisplayingViewController.swift */; };
 		25CB2CF724941F8D0018535C /* StartSetReaderDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CB2CF624941F8D0018535C /* StartSetReaderDisplayViewController.swift */; };
+		4039AF5426E88B1700AC2B01 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4039AF5326E88B1700AC2B01 /* PromiseKit */; };
 		4FF1B93741B92563E814B129 /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6EE1AAFBE440AF2364253B /* Pods_Example.framework */; };
 		6F8BE0922177B403009511E5 /* DiscoveryMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8BE0912177B403009511E5 /* DiscoveryMethodViewController.swift */; };
 		A63E8431260D073B006CB90C /* CreateLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63E8430260D073B006CB90C /* CreateLocationViewController.swift */; };
@@ -111,6 +112,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				022FB25B245868EF00F4C321 /* StripeTerminal.xcframework in Frameworks */,
+				4039AF5426E88B1700AC2B01 /* PromiseKit in Frameworks */,
 				4FF1B93741B92563E814B129 /* Pods_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,6 +219,9 @@
 			dependencies = (
 			);
 			name = Example;
+			packageProductDependencies = (
+				4039AF5326E88B1700AC2B01 /* PromiseKit */,
+			);
 			productName = Example;
 			productReference = C16F409D2094F07B009CE87C /* Example.app */;
 			productType = "com.apple.product-type.application";
@@ -247,6 +252,9 @@
 				Base,
 			);
 			mainGroup = C16F40942094F07B009CE87C;
+			packageReferences = (
+				4039AF5226E88B1700AC2B01 /* XCRemoteSwiftPackageReference "PromiseKit" */,
+			);
 			productRefGroup = C16F409E2094F07B009CE87C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -568,6 +576,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4039AF5226E88B1700AC2B01 /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mxcl/PromiseKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.15.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4039AF5326E88B1700AC2B01 /* PromiseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4039AF5226E88B1700AC2B01 /* XCRemoteSwiftPackageReference "PromiseKit" */;
+			productName = PromiseKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C16F40952094F07B009CE87C /* Project object */;
 }

@@ -9,6 +9,7 @@
 import UIKit
 import UserNotifications
 import StripeTerminal
+import PromiseKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -33,6 +34,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var locationToRegisterTo: Location?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        _ = Promise<Void>()
+        print("""
+            set breakpoint here.
+            'po self' results in:
+            error: <EXPR>:3:1: error: cannot find 'self' in scope
+            """
+        )
         guard let backendUrl = AppDelegate.backendUrl else {
             fatalError("You must provide a backend URL to run this app.")
         }
